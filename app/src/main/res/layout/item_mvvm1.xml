@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.demo.mvvmdemokt.mvvm.model.bean.MvvmDataBean1.Data" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{data.title}"></TextView>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{data.content}"></TextView>
+
+        <ImageView
+            android:id="@+id/ig_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:imageUrl="@{data.imageUrl}" />
+    </LinearLayout>
+</layout>
